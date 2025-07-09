@@ -1,0 +1,15 @@
+app = "sinreversa"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  DB_CONNECTION = "mysql"
+  DB_HOST = "tu-db-host"
+  DB_PORT = "3306"
+  DB_DATABASE = "tu-db-name"
+  DB_USERNAME = "tu-db-user"
+  DB_PASSWORD = "tu-db-password"
+
+[deploy]
+  release_command = "php artisan migrate --force"
